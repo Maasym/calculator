@@ -131,27 +131,6 @@ function clickNumBtn(num) {
     refreshScreen();
 }
 
-function clickPlusMinus() {
-    if (operandA === null && operation === null && operandB === null && result === null) {
-        initCalc();
-        operandA = num;
-    } else if (operandA !== null && operation === null && operandB === null && result === null) {
-        operandA = +`${operandA}${num}`;
-    } else if (operandA !== null && operation !== null && operandB === null && result === null) {
-        operandB = num;
-    } else if (operandA !== null && operation !== null && operandB !== null && result === null) {
-        operandB = +`${operandB}${num}`;
-    } else if (operandA !== null && operation !== null && operandB !== null && result !== null) {
-        operandA = result;
-        operandB = num;
-        result = null;
-    }
-    refreshScreen();
-}
-
-
-
-
 clearBtn.addEventListener('click', event => {
     initCalc();
     refreshScreen();
